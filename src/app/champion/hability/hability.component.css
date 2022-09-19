@@ -1,0 +1,102 @@
+h1 {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    margin-top: 125px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 23px;
+}
+
+h6 {
+    color: rgb(126, 126, 126);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+img {
+    border-radius: 10%;
+    border: 1px solid;
+}
+
+
+.process-wrapper {
+    margin: auto;
+    max-width: 1080px;
+    color: white;
+}
+
+#progress-bar-container {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    height: 100px;
+    margin-top: 65px;
+}
+
+#progress-bar-container ul {
+    padding: 0;
+    margin: 0;
+    padding-top: 15px;
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    margin-top: -40px
+}
+
+#progress-bar-container li {
+    list-style: none;
+    float: left;
+    width: 20%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all ease 0.2s;
+    vertical-align: bottom;
+    height: 60px;
+    position: relative;
+}
+
+
+#progress-content-section .section-content {
+    padding: 30px 40px;
+    text-align: center;
+    color: white;
+}
+
+#progress-content-section .section-content h2 {
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#progress-content-section .section-content p {
+    font-size: 20px;
+    line-height: 1.8em;
+}
+
+#progress-content-section .section-content {
+    display: none;
+    animation: FadeInUp 700ms ease 1;
+    animation-fill-mode: forwards;
+    transform: translateY(15px);
+    opacity: 0;
+}
+
+#progress-content-section .section-content.active {
+    display: block;
+}
+
+@keyframes FadeInUp {
+    0% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,56 @@
+<hr>
+
+<h1 class="text-center">¡EQUIPATE!</h1>
+
+<div style="margin-bottom: 2%;">
+
+    <h2>Elige dos hechizos para el combate</h2>
+
+    <form [formGroup]="formSpell" (ngSubmit)="submitFormSpell($event)" novalidate>
+        <div class="list container">
+            <div *ngFor="let spell of spells;" class="form-element">
+                <input type="checkbox" name="spell" value='{{spell.fields.hechizoname}}'
+                    id="{{spell.fields.hechizoname}}" (change)="checkedStateSpell($event, 2)"
+                    (change)="onCheckboxChange($event)" >
+                <label for='{{spell.fields.hechizoname}}'>
+                    <div class="icon">
+                        <img src='{{spell.fields.hechizoimage.fields.file.url}}' alt="{{spell.fields.hechizoname}}">
+                    </div>
+                    <div class="title">
+                        {{spell.fields.hechizoname}}
+                    </div>
+                </label>
+            </div>
+            <input class="btn btn-outline-dark buttonCustom" type="submit" value="Save">
+        </div>
+    </form>
+
+</div>
+
+<hr>
+
+<div style="margin-bottom: 5%;">
+
+    <h2>Elige seis items para el combate</h2>
+
+    <form [formGroup]="formItems" (ngSubmit)="submitFormItems($event)" novalidate>
+        <div class="list container">
+
+            <div *ngFor="let item of items;" class="form-element">
+                <input type="checkbox" name="item" value='{{item.fields.name}}' id="{{item.fields.name}}"
+                    (change)="checkedStateItems($event, 6)" (change)="onCheckboxChangeItems($event)"
+                    id="{{item.fields.name}}">
+                <label for='{{item.fields.name}}'>
+                    <div class="icon">
+                        <img src='{{item.fields.image.fields.file.url}}' alt="{{item.fields.name}}">
+                    </div>
+                    <div class="title">
+                        {{item.fields.name}}
+                    </div>
+                </label>
+            </div>
+            <input class="btn btn-outline-dark buttonCustom" type="submit" value="Save">
+        </div>
+    </form>
+
+</div>

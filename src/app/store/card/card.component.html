@@ -1,0 +1,17 @@
+<div class="margen ">
+
+    <div class="row justify-content-center">
+
+        <div *ngFor="let champion of lolChampions;" class="card">
+            <a [routerLink]="['champion', champion.sys.id]">
+                <img src='{{champion.fields.championImage.fields.file.url}}' [alt]="champion.fields.championName">
+                <span>{{champion.fields.championName}}</span>
+            </a>
+            <div *ngIf="!unlockedChampion(champion)" class="unlockedChampion">
+                <img src="assets\icon\unlocked.svg" alt="unlockedChampion">
+            </div>
+        </div>
+
+    </div>
+
+</div>

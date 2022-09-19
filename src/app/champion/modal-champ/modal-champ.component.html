@@ -1,0 +1,19 @@
+<div class="contentModal justify-content-center">
+    <div class="custom-img" style="width:100%;">
+        <img src="{{data.data.fields.file.url}}" alt="champ" style="width:100%; height:100%;">
+        <button class="closeModal" (click)="closeModal()">X</button>
+    </div>
+    <div class="custom-name">
+        {{data.data.fields.title}}
+    </div>
+    <div class="custom-frase">
+        {{data.dataFrase}}
+    </div>
+    <hr>
+    <div class="buttonCustom">
+        <button class="valueCham" (click)="buyChamp()">
+            <img src="assets/icon/riot-points.png" alt="riot-points">
+            <p>{{data.data.fields.description}}</p>
+        </button>
+    </div>
+</div>

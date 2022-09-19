@@ -1,0 +1,65 @@
+.card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    cursor: pointer;
+    clip-path: polygon(90% 0, 100% 7%, 100% 100%, 0 100%, 0 0);
+    border: none;
+}
+
+.card:hover {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+.card img {
+    position: absolute;
+    width: 250px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: 1s;
+}
+
+.card:hover img {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.card span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #061c25;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 20px;
+    transition: 1s;
+}
+
+.card:hover span {
+    padding: 10px 30px;
+    background: #006680;
+}
+
+.unlockedChampion img {
+    position: absolute;
+    top: 36px;
+    left: 31px;
+    width: 40px;
+    height: 40px;
+}
+
+.margen {
+    margin-top: 80px;
+}

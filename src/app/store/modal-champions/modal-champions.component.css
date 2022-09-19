@@ -1,0 +1,186 @@
+.container-modal {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-color: #cac9c9;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, .08);
+}
+
+.wrapper .left {
+    width: 60%;
+    background: linear-gradient(to right, #006680, #80aab4);
+    padding: 30px 25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    color: rgb(224, 224, 224);
+}
+
+.wrapper .left img {
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-bottom: auto;
+    width: 90%;
+    height: 80%;
+
+}
+
+h6 {
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-weight: 100%;
+    font-style: italic;
+    font-size: 15px;
+}
+
+#h7 {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    font-family: sans-serif;
+    font-weight: 100%;
+    font-style: italic;
+    font-size: 13px;
+    color: #797878;
+}
+
+h5 {
+    margin-bottom: 5px;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.wrapper .left h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 25px;
+}
+
+p {
+    font-size: 15px;
+    height: 270px;
+    overflow-y: auto;
+
+}
+
+p::-webkit-scrollbar {
+    width: 4px;
+    background: transparent;
+}
+
+P::-webkit-scrollbar-thumb {
+    background: #d1d4d4;
+    border-radius: 5px;
+}
+
+.wrapper .right {
+    width: 65%;
+    background: #fff;
+    padding: 30px 25px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.wrapper .right .info,
+.wrapper .right .projects {
+    margin-bottom: 25px;
+}
+
+
+.wrapper .right .info h3,
+.wrapper .right .projects h3 {
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #adacac;
+    color: #353c4e;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.wrapper .social_media ul {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    display: flex;
+    border-bottom: 1px solid #adacac;
+}
+
+.wrapper .social_media ul li {
+   
+    margin-right: 10px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.wrapper .social_media ul li img {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #004152;
+    border-radius: 5px;
+}
+
+.wrapper .social_media ul li a {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+}
+
+ul li .content {
+    position: absolute;
+    box-orient: 55px;
+    width: 250px;
+    height: 150px;
+    padding: 5px;
+    border-radius: 10px;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    opacity: 0;
+    transition: 0s;
+    text-align: left;
+    font-family: 'Josefin Sans';
+    font-size: 15px;
+    font-style: italic;
+    background: #C2F3FF;
+}
+
+ul li .content::-webkit-scrollbar {
+    width: 4px;
+    background: transparent;
+}
+
+ul li .content::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+ul li:hover .content {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0%);
+}

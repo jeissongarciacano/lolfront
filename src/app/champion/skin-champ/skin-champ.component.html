@@ -1,0 +1,25 @@
+<h1 class="text-center">ASPECTOS DISPONIBLES</h1>
+<div class="slideshow-container">
+
+    <div *ngFor="let champ of champion; let i = index" class="mySlides fadeCustom">
+
+        <div class="buttomCustom">
+            <button id="{{champ.fields.title}}" class="btn btn-light"  (click)="modalCompra(champ, i)" >Desbloquear</button>
+        </div>
+
+        <div class="numbertext"> {{i+1}} / {{champion.length}} </div>
+        <img alt="img" src="{{champ.fields.file.url}}" style="width:100%">
+        <div class="text">{{champ.fields.title}}</div>
+
+    </div>
+
+    <a class="prev" (click)="plusSlides(-1)">❮</a>
+    <a class="next" (click)="plusSlides(1)">❯</a>
+
+</div>
+
+<br>
+
+<div style="text-align:center">
+    <span *ngFor="let champ of champion; let i = index" class="dot" (click)="currentSlide(i+1)"></span>
+</div>

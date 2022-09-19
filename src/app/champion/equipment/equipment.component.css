@@ -1,0 +1,119 @@
+h1 {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 23px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+h2 {
+    font-size: 25px;
+    color: #888;
+    text-align: center;
+}
+
+.list {
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 950px;
+    background-color: #a5a0a083;
+    padding: 50px;
+    border-radius: 5px;
+}
+
+.form-element {
+    position: relative;
+    width: 150px;
+    height: 140px;
+}
+
+.form-element input {
+    display: none;
+}
+
+.form-element label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    background: #fff;
+    box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 200ms ease-in-out;
+    border-radius: 5px;
+}
+
+.icon img {
+    border-radius: 5px;
+}
+
+.form-element .icon {
+    margin-top: 10px;
+    font-size: 30px;
+    transition: all 200ms ease-in-out;
+}
+
+.form-element .title {
+    font-size: 15px;
+    color: #555;
+    padding: 5px 0px;
+    transition: all 200ms ease-in-out;
+}
+
+.form-element label:before {
+    content: "✓";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 8px;
+    left: 8px;
+    background: rgb(0, 9, 19);
+    color: #fff;
+    text-align: center;
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 200ms ease-in-out;
+}
+
+.form-element input:checked+label:before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.form-element input:checked+label .icon {
+    color: rgb(0, 9, 19);
+}
+
+.form-element input:checked+label .title {
+    color: rgb(0, 9, 19);
+}
+
+.form-element input:checked+label {
+    border: 2px solid rgb(0, 9, 19);
+}
+
+hr {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.buttonCustom {
+    position: absolute;
+    border-radius: 5px;
+    right: 13px;
+    bottom: 13px;
+    width: 80px;
+}

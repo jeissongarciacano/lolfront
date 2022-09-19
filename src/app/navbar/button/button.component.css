@@ -1,0 +1,93 @@
+.btn-neon {
+    width: 120%;
+    height: 35px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Roboto";
+    font-size: 22px;
+    overflow: hidden;
+    transition: 0.2s;
+    margin: auto;
+    cursor: context-menu;
+    border-radius: 5px;
+}
+
+.btn-neon span {
+    position: absolute;
+    display: block;
+}
+
+#span1 {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #006680);
+}
+
+.btn-neon:hover #span1 {
+    left: 100%;
+    transition: 1s;
+}
+
+#span3 {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #006680);
+}
+
+.btn-neon:hover #span3 {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+#span2 {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #006680);
+}
+
+.btn-neon:hover #span2 {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+#span4 {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #006680);
+}
+
+.btn-neon:hover #span4 {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+.coins img {
+    margin-left: 12px;
+    margin-bottom: 5px;
+}
+
+.coins {
+    color: #fff;
+    margin-top: 4px;
+    font-size: 17px;
+    width: 200px;
+}
+
+p {
+    margin-right: 23px;
+}

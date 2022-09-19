@@ -1,0 +1,59 @@
+<hr>
+<h1>HABILIDADES</h1>
+<br>
+<div class="process-wrapper">
+    <div id="progress-bar-container">
+        <ul>
+            <li class="p active" id="step">
+                <img src="{{champion.championSkillImage[0].fields.file.url}}" alt="passive">
+            </li>
+
+            <li class="q" id="step">
+                <img src="{{champion.championSkillImage[1].fields.file.url}}" alt="passive">
+
+            <li class="w" id="step">
+                <img src="{{champion.championSkillImage[2].fields.file.url}}" alt="passive">
+            </li>
+
+            <li class="e" id="step">
+                <img src="{{champion.championSkillImage[3].fields.file.url}}" alt="passive">
+            </li>
+
+            <li class="r" id="step">
+                <img src="{{champion.championSkillImage[4].fields.file.url}}" alt="passive">
+            </li>
+        </ul>
+    </div>
+
+    <div id="progress-content-section">
+        <div class="section-content passive active">
+            <h6>pasiva</h6>
+            <h2>{{champion.championPassive.content[1].content[0].value}}</h2>
+            <p>{{champion.championPassive.content[2].content[0].value}}.</p>
+        </div>
+
+        <div class="section-content habilityQ">
+            <h6>Q</h6>
+            <h2>{{champion.championAbilityQ.content[1].content[0].value}}</h2>
+            <p>{{champion.championAbilityQ.content[2].content[0].value}}.</p>
+        </div>
+
+        <div class="section-content habilityW">
+            <h6>W</h6>
+            <h2>{{champion.championAbilityW.content[1].content[0].value}}</h2>
+            <p>{{champion.championAbilityW.content[2].content[0].value}}.</p>
+        </div>
+
+        <div class="section-content habilityE">
+            <h6>E</h6>
+            <h2>{{champion.championAbilityE.content[1].content[0].value}}</h2>
+            <p>{{champion.championAbilityE.content[2].content[0].value}}.</p>
+        </div>
+
+        <div class="section-content habilityR">
+            <h6>R</h6>
+            <h2>{{champion.championAbilityR.content[1].content[0].value}}</h2>
+            <p>{{champion.championAbilityR.content[2].content[0].value}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="navbar navbar-expand-lg fixed-top" style="background-color: #111;">
+   
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a [routerLink]="['']"><img src="assets/icon/Riot_Games-Logo.wine.svg" alt="Riot_Games-Logo" class="logo"></a>
+                </li>
+                <li class="nav-item">
+                    <app-search></app-search>
+                </li>
+            </ul>
+
+            <div *ngIf="!logging()">
+                <button type="button" class="btn btn-outline-light" (click)="openLogin()">Iniciar Sesión</button>
+            </div>
+
+            <div *ngIf="logging()">
+                <app-button></app-button>
+                
+            </div>
+            <div *ngIf="logging()">
+                <button type="button" class="btn btn-outline-light" (click)="openLogout()">Cerrar Sesión</button>
+            </div>
+
+            
+        </div>
+    </div>
+</div>

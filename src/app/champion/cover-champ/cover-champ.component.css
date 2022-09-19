@@ -1,0 +1,98 @@
+.cover {
+    background: rgb(0, 9, 19);
+}
+
+.custom-img {
+    margin-top: 5%;
+    position: relative;
+    text-align: center;
+    color: white;
+    animation: 2000ms;
+}
+
+.custom-img img {
+    margin-top: 50px;
+    mask-image: linear-gradient(rgb(0, 0, 0) 65%, rgba(0, 0, 0, 0) 98%);
+}
+
+.custom-nick {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -330%);
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 1.7vw;
+    letter-spacing: 0.04em;
+}
+
+.custom-name {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 1000;
+    font-style: italic;
+    font-size: 6.5vw;
+    letter-spacing: 0.07em;
+    width: 100%;
+}
+
+.custom-data-champ {
+    width: 90%;
+    height: 200px;
+    border: 0.5px solid;
+    border-color: white;
+    margin-top: 2%;
+    color: white;
+}
+
+.custom-rol-level {
+    height: 198px;
+    border-right: 0.5px solid white;
+    text-align: center;
+    align-items: center;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 1vw;
+}
+
+.difficulty {
+    width: 65px;
+    height: 65px;
+}
+
+.custom-text-white {
+    width: 100%;
+    margin-top: 0.9375rem;
+    color: rgb(255, 255, 255);
+}
+
+.custom-text-golden {
+    width: 100%;
+    color: rgb(208, 168, 92);
+}
+
+.custom-description-champ {
+    width: 49%;
+    height: 170px;
+    margin-top: 1%;
+    margin-left: 2%;
+    overflow-y: scroll;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 1.25em;
+}
+
+.custom-description-champ::-webkit-scrollbar {
+    width: 4px;
+    background: transparent;
+}
+
+.custom-description-champ::-webkit-scrollbar-thumb {
+    background: rgb(208, 168, 92);
+    border-radius: 5px;
+}

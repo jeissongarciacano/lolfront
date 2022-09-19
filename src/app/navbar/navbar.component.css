@@ -1,0 +1,9 @@
+button {
+    transition: 0.5s;
+    font-family: "Roboto";
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+}
