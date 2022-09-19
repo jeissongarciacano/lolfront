@@ -18,7 +18,8 @@ export class UserService {
 
   }
 
-  getUserInfo() {
+  getUserInfo(sub: string) {
+
     return this.http.post(`${this.baseUrl}/get-user-info`, { sub: localStorage.getItem('sub') },
       {
         headers: new HttpHeaders({
@@ -61,14 +62,14 @@ export class UserService {
 
   getSkin() {
     return this.http
-    .get(`${this.baseUrl}/skins?user=${localStorage.getItem('sub')}`,
-      {
-        headers: new HttpHeaders({
-          'content-type': 'aplication/json',
-          'Authorization': localStorage.getItem("idToken"),
-        })
-      }
-    )
+      .get(`${this.baseUrl}/skins?user=${localStorage.getItem('sub')}`,
+        {
+          headers: new HttpHeaders({
+            'content-type': 'aplication/json',
+            'Authorization': localStorage.getItem("idToken"),
+          })
+        }
+      )
   }
 
   getSpell() {

@@ -5,14 +5,14 @@
             <span id="span2"></span>
             <span id="span3"></span>
             <span id="span4"></span>
-            <p style="margin-right: 0px;">Hola, {{userName}}</p>
+            <p style="margin-right: 0px;">Hola, {{res.username}}</p>
         </a>
     </div>
 
     <div class="coins justify-content-center">
-        <span class="coin">{{coins | currency }}</span>
+        <span class="coin">{{res.coins | currency}}</span>
         <img src="assets\icon\riot-points.png" alt="coins">
-        <span class="level" style="margin-left: 8px;">{{level }}</span>
+        <span class="level" style="margin-left: 8px;">{{res.level}}</span>
     </div>
     
 
