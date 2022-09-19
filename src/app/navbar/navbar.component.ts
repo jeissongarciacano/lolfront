@@ -42,10 +42,10 @@ export class NavbarComponent implements OnInit {
     //console.log("idToken", idToken)
     //console.log(decode.sub)
     //this.userName = decode.email;
-    localStorage.setItem("accesToken", accesToken);
-    localStorage.setItem("idToken", idToken);
     if (accesToken != null && idToken != null) {
       //console.log("info")
+      localStorage.setItem("accesToken", accesToken);
+      localStorage.setItem("idToken", idToken);
       const decode: any = jwt_decode(idToken);
       localStorage.setItem('sub', decode.sub)
       //this.saveLocalStorage(accesToken, idToken, decode.sub);
