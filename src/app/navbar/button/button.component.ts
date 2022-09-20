@@ -15,10 +15,24 @@ export class ButtonComponent implements OnInit {
   @Input()
   res: any
 
+  userName: string;
+  coins: string;
+  rango: string;
+
   ngOnInit(): void {
-    console.log(this.res)
+    if (this.res) {
+      this.userName = this.res.username;
+      this.coins = this.res.coins;
+      this.rango = this.res.level;
+    } else {
+      this.userService.getUserInfo(localStorage.getItem('sub')).subscribe(res => this.setInfo(res))
+    }
   }
 
-
+  setInfo(res) {
+    this.userName = localStorage.getItem('userName')
+    this.coins = localStorage.getItem('coins')
+    this.rango = localStorage.getItem('rango')
+  }
 
 }
