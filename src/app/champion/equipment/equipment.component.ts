@@ -76,13 +76,8 @@ export class EquipmentComponent implements OnInit {
 
         checkboxSpell01.checked = true;
         checkboxSpell02.checked = true;
-        
-        this.formSpell.value.checkArray.
-
-        console.log(checkboxSpell01)
 
         this.counterSpell = 2;
-
 
         //this.formSpell.value.checkArray[0] = res[champ].spells[0];
         //this.formSpell.value.checkArray[1] = res[champ].spells[1];
@@ -215,8 +210,8 @@ export class EquipmentComponent implements OnInit {
         this.formItems.value.checkArray[4],
         this.formItems.value.checkArray[5]]
 
-      this.userService.configureItems(this.champName.toLowerCase(), element).subscribe(res => this.openSnackBar("Configuracion de items guardada","OK"),
-      error => this.errorHandle(error))
+      this.userService.configureItems(this.champName.toLowerCase(), element).subscribe(res => this.openSnackBar("Configuracion de items guardada", "OK"),
+        error => this.errorHandle(error))
 
     } else {
       this.openSnackBar("Selecciona 6 items", "OK")
@@ -231,8 +226,8 @@ export class EquipmentComponent implements OnInit {
   }
 
   errorHandle(error: any) {
-    if (error.status == 401){
-      this.openSnackBar("Debe iniciar sesion para guardar","OK")
+    if (error.status == 401) {
+      this.openSnackBar("Debe iniciar sesion para guardar", "OK")
     }
   }
 

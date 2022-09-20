@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/service/user.service';
+import { map } from 'rxjs/operators';
+import jwt_decode from 'jwt-decode';
 
 @Component({
   selector: 'app-navbar',
@@ -12,11 +15,42 @@ export class NavbarComponent implements OnInit {
   rango: string;
   coins: number;
 
-  constructor(private userService: UserService) { }
+  res: any
+
+  constructor(private userService: UserService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     //console.log("service")
-    this.userService.getUserInfo().subscribe(res => this.setPerfil(res))
+    //const location = window.location.href;
+    this.route.fragment
+      .pipe(
+        map(fragment => new URLSearchParams(fragment)),
+        map(params => ({
+          access_token: params.get('access_token'),
+          id_token: params.get('id_token'),
+          error: params.get('error'),
+        }))
+      )
+      .subscribe(res => {
+        this.getPerfil(res.access_token, res.id_token)
+      });
+
+  }
+
+  getPerfil(accesToken: string, idToken: string): void {
+    //console.log("accesToken", accesToken)
+    //console.log("idToken", idToken)
+    //console.log(decode.sub)
+    //this.userName = decode.email;
+    if (accesToken != null && idToken != null) {
+      //console.log("info")
+      localStorage.setItem("accesToken", accesToken);
+      localStorage.setItem("idToken", idToken);
+      const decode: any = jwt_decode(idToken);
+      localStorage.setItem('sub', decode.sub)
+      //this.saveLocalStorage(accesToken, idToken, decode.sub);
+      this.userService.getUserInfo(decode.sub).subscribe(res => this.setPerfil(res))
+    }
   }
 
   openLogin() {
@@ -40,6 +74,7 @@ export class NavbarComponent implements OnInit {
   }
 
   setPerfil(res: any) {
+    this.res = res;
     this.userName = res.username
     this.coins = res.coins
     this.rango = res.level
@@ -50,15 +85,8 @@ export class NavbarComponent implements OnInit {
   }
 
   logging() {
-
-    // if (localStorage.getItem('userName')) {
-    // return true;
-    // }
-    //this.userService.getUserInfo().subscribe(res => this.userName = res)
-    //console.log(this.userName)
-    //window.sessionStorage
     const location = window.location.href;
-    return location.includes('id_token') || localStorage.getItem('sub');
+    return location.includes('id_token') || localStorage.getItem('userName');
     //return false;
   }
 
